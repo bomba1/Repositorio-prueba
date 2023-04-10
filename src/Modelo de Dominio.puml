@@ -1,0 +1,28 @@
+@startuml
+left to right direction
+
+Entity Usuario {
+    Nombre de usuario
+    Correo electronico
+}
+
+Entity Pelicula {
+    Titulo de la pelicula
+    Genero
+    Duracion de la pelicula
+}
+
+Entity Comprobante {
+    Nombre de usuario
+    Titulo
+    Fecha inicio arriendo
+    Fecha termino arriendo
+    Numero de la transaccion
+}
+
+note "Se realiza con tarjeta de credito" as n1
+
+Usuario "1" --> "1..*" Pelicula: arrienda
+Usuario "1" -- "1" Comprobante: genera
+
+@enduml

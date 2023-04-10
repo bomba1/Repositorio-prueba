@@ -1,0 +1,13 @@
+@startuml
+
+Class Cliente{
+
+}
+
+Class Compra{
+
+}
+
+Cliente "1" --> "*" Compra: compra
+
+@enduml
